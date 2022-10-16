@@ -1,4 +1,4 @@
-x = input("0or1")
+x = int(input("0or1"))
 if(x==0):
   print("Hello")
  else:
