@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>CARD-5</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .main {
+            position: relative;
+            /* top: 50px; */
+            /* left: 50px; */
+            /* bottom: 50px; */
+            width: 300px;
+            height: 50px;
+            background-color: rgb(74, 133, 182);
+            border-radius: 25px;
+            transition: 0.5s;
+        }
+        
+        .abc {
+            height: 400px;
+            background: red;
+        }
+        
+        .main .button {
+            position: absolute;
+            width: 50px;
+            height: 40px;
+            background-color: rgb(74, 133, 182);
+            bottom: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-bottom-left-radius: 35px;
+            border-bottom-right-radius: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.7em;
+        }
+        
+        .main .content {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            /* display: flex;
+            justify-content: center;
+            flex-direction: column; */
+            /* align-items: center; */
+            /* text-align: center; */
+        }
+        
+        .main .content .pic {
+            position: relative;
+            width: 90px;
+            height: 90px;
+            /* overflow: hidden; */
+            transform: translateX(115%);
+            margin-top: 10px;
+        }
+        
+        .main .content .pic::before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            bottom: -4px;
+            left: -4px;
+            right: -4px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0px 0px 10px rgb(255, 255, 255);
+            border-radius: 50%;
+        }
+        
+        .box {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 1.5em;
+            font-weight: 900;
+            letter-spacing: 0.1em;
+        }
+        
+        h3 {
+            text-align: center;
+            text-transform: capitalize;
+            color: antiquewhite;
+            font-weight: 900;
+            margin-top: -10px;
+        }
+        
+        .text {
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            color: rgb(40, 40, 40);
+        }
+        
+        .icon {
+            text-align: center;
+            margin-top: 25px;
+        }
+        
+        a {
+            text-decoration: none;
+            padding: 10px;
+            box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.1), -5px -5px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 0px;
+            font-weight: 900;
+            text-transform: capitalize;
+            border-radius: 10px;
+            color: bisque;
+        }
+        
+        #lock {
+            transition: 1s;
+            /* z-index: 10; */
+        }
+        
+        .key {
+            transform: rotate(180deg);
+        }
+        /* .stb{
+            color: red;
+        } */
+        
+        .mny {
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="box">
+            <div class="content">
+                <h1>famous face</h1>
+                <h3>someone special</h3>
+                <div class="pic">
+                    <img src="neymar.jpeg" alt="">
+                </div>
+                <div class="text">
+                    <b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos aperiam sed omnis, quas eos dolorum magnam fuga consequatur eaque tempora quod velit ea suscipit placeat delectus fugit iste dolore quia.</b>
+                </div>
+                <div class="icon">
+                    <a href="#">learn more</a>
+                </div>
+            </div>
+        </div>
+        <div class="button">
+            <span class="fas fa-lock" id="lock"></span>
+        </div>
+    </div>
+
+    <script>
+        document.getElementsByClassName("button")[0].addEventListener("click", xyz);
+
+        function xyz() {
+            document.getElementsByClassName("main")[0].classList.toggle("abc");
+            document.getElementById("lock").classList.toggle("key");
+        }
+    </script>
+</body>
+
+</html>
